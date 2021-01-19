@@ -18,4 +18,8 @@ export class AppComponent {
   handleAgree(){
     this.agreeFlag = false
   }
+  handleMyEvent(evt){
+    // the custom event is handled here
+    this.username = evt.data
+  }
 }

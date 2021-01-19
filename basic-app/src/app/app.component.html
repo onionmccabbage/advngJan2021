@@ -11,12 +11,12 @@
   </ul>
 
   <app-home></app-home>
-  <app-about [stamp]='timestamp'></app-about>
+  <app-about [stamp]='timestamp' (myEvent)='handleMyEvent($event)'></app-about>
   <app-contact></app-contact>
   <hr/>
   <router-outlet></router-outlet>
 
   <aside *ngIf='agreeFlag'>
-    <button id='btnAgree' (click)='handleAgree()''>Agree {{agreeFlag}}</button>
+    <button id='btnAgree' (click)='handleAgree()'>Agree {{agreeFlag}}</button>
   </aside>
 </article>

@@ -1,3 +1,10 @@
 <p>This is the 'About' Page, with a time stamp of {{stamp | date}}</p>
+<section>
+    <input [(ngModel)]='username' />
+    <br/>
+    <button (click)='handleClick()'>Ok</button>
+    <hr/>
+    <h4>{{username}}</h4>
+</section>
 <img [src]='myPic' />
 <img src='{{"https://via.placeholder.com/64/64"}}' />

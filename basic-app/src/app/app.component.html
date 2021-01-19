@@ -1,10 +1,18 @@
 <article>
+  <nav>
+    <a routerLink='/home'>Home</a> |
+    <a routerLink='/about'>About</a> |
+    <a routerLink='/contact'>Contact</a> 
+  </nav>
   <h2>Welcome {{username}} </h2>
   <p>One plus two equals {{1+2}}</p>
   <ul>
     <li *ngFor='let item of products; index as i'>{{item.name}} {{item.price | currency}}</li>
-
   </ul>
 
+  <app-home></app-home>
   <app-about></app-about>
+  <app-contact></app-contact>
+  <hr/>
+  <router-outlet></router-outlet>
 </article>

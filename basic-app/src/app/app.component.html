@@ -1,0 +1,10 @@
+<article>
+  <h2>Welcome {{username}} </h2>
+  <p>One plus two equals {{1+2}}</p>
+  <ul>
+    <li *ngFor='let item of products; index as i'>{{item.name}} {{item.price | currency}}</li>
+
+  </ul>
+
+  <app-about></app-about>
+</article>

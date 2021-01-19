@@ -1,22 +1,22 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  selector: 'app-data',
+  templateUrl: './data.component.html',
+  styleUrls: ['./data.component.css']
 })
-export class AboutComponent implements OnInit {
+export class DataComponent implements OnInit {
 // declare properties for this component
-  @Input() stamp:any = 'watch here...'
-  @Output() myEvent = new EventEmitter() // Output MUST be an event emitter (or descend from)
-  myPic:string = 'https://via.placeholder.com/64/64'
-  username:string = 'Ada'
+  @Output() dataEvent = new EventEmitter() // Output MUST be an event emitter (or descend from)
+  id:string = '1'
+  category:string = 'users'
+  @Input() buttonLabel = 'Ready'
   constructor() { }
 
   // event handlers for this component
-  handleClick(){
+  sendContact(){
     // we will emit our CUSTOM event, pasing data along with it
-    this.myEvent.emit({data:this.username}) // we pass an object as the payload
+    this.dataEvent.emit({data:{id:this.id, category:this.category}}) // we pass an object as the payload
   }
 
   ngOnInit(): void {

@@ -6,6 +6,9 @@
   </nav>
   <h2>Welcome {{username}} </h2>
   <p>One plus two equals {{1+2}}</p>
+  <h4>Review Exercise</h4>
+  <app-data [buttonLabel]='label' (dataEvent)='handleDataEvent($event)' ></app-data>
+  <p>Current values: id is {{id}} category is {{category}}</p>
   <ul>
     <li *ngFor='let item of products; index as i'>{{item.name}} {{item.price | currency}}</li>
   </ul>

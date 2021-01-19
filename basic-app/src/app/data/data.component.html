@@ -2,11 +2,9 @@
 <section>
     <input [(ngModel)]='id' />
     <br/>
-    <input [(ngModel)]='contact' />
+    <input [(ngModel)]='category' />
     <br/>
     <button (click)='sendContact()'>{{buttonLabel}}</button>
     <hr/>
-    <h4>{{username}}</h4>
+    <h4>Current Values: {{id}} {{category}}</h4>
 </section>
-<img [src]='myPic' />
-<img src='{{"https://via.placeholder.com/64/64"}}' />

@@ -1,0 +1,30 @@
+<article>
+    <h2>This is a Customizable Component, using Content Projection</h2>
+    <section>
+        <ng-container *ngTemplateOutlet='headerTemplate ? headerTemplate : defaultHeaderTemplate'>
+
+        </ng-container>
+    </section>
+    <section>
+        <ng-container *ngTemplateOutlet='bodyTemplate ? bodyTemplate : defaultBodyTemplate'>
+            
+        </ng-container>
+    </section>
+    <section>
+        <ng-container *ngTemplateOutlet='footerTemplate ? footerTemplate : defaultFooterTemplate'>
+            
+        </ng-container>
+    </section>
+
+    <ng-template #defaultHeaderTemplate>
+        <p>This is the default header</p>
+    </ng-template>
+    <ng-template #defaultBodyTemplate>
+        <p>This is the default body</p>
+    </ng-template>
+    <ng-template #defaultFooterTemplate>
+        <p>This is the default footer</p>
+    </ng-template>
+
+</article>
+

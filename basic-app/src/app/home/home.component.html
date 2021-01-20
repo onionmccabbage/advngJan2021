@@ -1,1 +1,17 @@
 <p>home works!</p>
+<aside>
+    <!-- declare overrides for the templates -->
+    <ng-template #customHeader>Override Header Content</ng-template>
+    <ng-template #customBody>Override Body Content</ng-template>
+    <ng-template #customFooter>Override Footer Content</ng-template>
+
+    <!-- instantiate the component using these overrides -->
+    <app-custable [headerTemplate]='customHeader' 
+                  [bodyTemplate]='customBody'
+                  [footerTemplate]='customFooter'>
+    </app-custable>
+
+    <!-- instantiate WITHOUT overrides i.e. see default content -->
+    <app-custable></app-custable>
+
+</aside>

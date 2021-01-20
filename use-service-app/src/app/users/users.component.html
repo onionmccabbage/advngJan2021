@@ -1,0 +1,19 @@
+<aside>
+    <button (click)='getData()'>Get All Data</button>
+    <dl>
+        <dt *ngFor='let person of users'>
+            {{person.name}}
+        </dt>
+    </dl>
+<!-- for debug use the json pipe like this -->
+    <pre>{{users |json}}</pre>
+
+    <hr/>
+    <input type='number' min='1' max='9'
+        placeholder="choose a number"
+        [(ngModel)]='userId'  />
+        <br/>
+    <button (click)='getSingleUser()'>Get One User</button>
+    <br/>
+    <p>{{user.name}}</p>
+</aside>

@@ -1,0 +1,55 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Angular Review Exercise 1 40 minutes
+========================= until 3:55
+In the existing app:
+Generate a 'data' component and write two <input> tags and a button
+You should show the values from the fields in the component
+Make the button text configurable via @Input 
+
+The component will be used for 'category' and 'id'
+
+Consider good archicture
+
+Optional
+--------
+Use @Output to send data to the parent
+Configure a default (click) handler for the button which then emits a custom event
+Handle this custom event in the parent component
+maybe use ngIf to conditionally show optional content
+
